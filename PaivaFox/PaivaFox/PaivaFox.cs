@@ -12,6 +12,7 @@ namespace PaivaFox
 {
     public partial class PaivaFox : Form
     {
+        string home = null;
         public PaivaFox()
         {
             InitializeComponent();
@@ -35,7 +36,62 @@ namespace PaivaFox
 
         private void Tb_url_KeyDown(object sender, KeyEventArgs e)
         {
-            Navegar();
+            if(e.KeyCode == Keys.Enter)
+                Navegar();
+        }
+
+        private void Btn_home_Click(object sender, EventArgs e)
+        {
+            if(home == null)
+                webBrowser1.GoHome();
+            else
+            {
+                webBrowser1.Navigate(home);
+            }
+        }
+
+        private void Btn_voltar_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void Btn_proximo_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+
+        private void webBrowser1_GoForwardChanged(object sender, EventArgs e)
+        {
+            btn_proximo.Enabled = webBrowser1.CanGoForward;
+        }
+        private void webBrowser1_GoBackChanged(object sender, EventArgs e)
+        {
+            btn_voltar.Enabled = webBrowser1.CanGoBack;
+        }
+
+        private void Btn_parar_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Stop();
+        }
+
+        private void Btn_atualizar_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+        }
+
+        private void Btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoSearch();
+        }
+
+        private void Btn_definirHome_Click(object sender, EventArgs e)
+        {
+            home = tb_url.Text;
+        }
+
+        private void PaivaFox_Load(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("www.google.com");
         }
     }
 }

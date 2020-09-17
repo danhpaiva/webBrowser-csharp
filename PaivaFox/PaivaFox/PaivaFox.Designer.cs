@@ -76,6 +76,7 @@
             this.btn_home.TabIndex = 3;
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.Btn_home_Click);
             // 
             // btn_voltar
             // 
@@ -85,6 +86,7 @@
             this.btn_voltar.TabIndex = 4;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
             // 
             // btn_proximo
             // 
@@ -94,6 +96,7 @@
             this.btn_proximo.TabIndex = 5;
             this.btn_proximo.Text = "Proximo";
             this.btn_proximo.UseVisualStyleBackColor = true;
+            this.btn_proximo.Click += new System.EventHandler(this.Btn_proximo_Click);
             // 
             // btn_parar
             // 
@@ -103,6 +106,7 @@
             this.btn_parar.TabIndex = 6;
             this.btn_parar.Text = "Parar";
             this.btn_parar.UseVisualStyleBackColor = true;
+            this.btn_parar.Click += new System.EventHandler(this.Btn_parar_Click);
             // 
             // btn_atualizar
             // 
@@ -112,6 +116,7 @@
             this.btn_atualizar.TabIndex = 7;
             this.btn_atualizar.Text = "Atualizar";
             this.btn_atualizar.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
             // btn_pesquisar
             // 
@@ -121,6 +126,7 @@
             this.btn_pesquisar.TabIndex = 8;
             this.btn_pesquisar.Text = "Pesquisa";
             this.btn_pesquisar.UseVisualStyleBackColor = true;
+            this.btn_pesquisar.Click += new System.EventHandler(this.Btn_pesquisar_Click);
             // 
             // btn_definirHome
             // 
@@ -130,6 +136,7 @@
             this.btn_definirHome.TabIndex = 9;
             this.btn_definirHome.Text = "Definir Home";
             this.btn_definirHome.UseVisualStyleBackColor = true;
+            this.btn_definirHome.Click += new System.EventHandler(this.Btn_definirHome_Click);
             // 
             // PaivaFox
             // 
@@ -148,9 +155,11 @@
             this.Controls.Add(this.webBrowser1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PaivaFox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PaivaFox";
+            this.Text = "PaivaFox - Uma maneira rápida de navegar na Web";
+            this.Load += new System.EventHandler(this.PaivaFox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
