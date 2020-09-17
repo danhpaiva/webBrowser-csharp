@@ -1,7 +1,7 @@
 # :rocket: PaivaFox - Uma maneira rápida de navegar na Web
 
 <p align="center">
-  <img src="https://i.imgur.com/ZCO3xM7.png">
+  <img src="https://i.imgur.com/sE705gU.png">
 </p>
 
 ## Descrição
