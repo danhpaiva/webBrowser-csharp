@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PaivaFox
 {
-    public partial class Form1 : Form
+    public partial class PaivaFox : Form
     {
-        public Form1()
+        public PaivaFox()
         {
             InitializeComponent();
         }
