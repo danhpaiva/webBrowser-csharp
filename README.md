@@ -10,4 +10,4 @@ Foi desenvolvido um navegador para a web que possui funções como navegar, volt
 
 ## Ferramentas Utilizadas
 - Visual Studio 2019
-- Ícone: https://icon-icons.com/pt/icone/navegador/30857
+- Ícone: https://icon-icons.com/pt/icone/navegador/30857 | https://www.flaticon.com/
