@@ -36,28 +36,34 @@ namespace PaivaFox
 
         private void Tb_url_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
                 Navegar();
         }
 
         private void Btn_home_Click(object sender, EventArgs e)
         {
-            if(home == null)
+            if (home == null)
+            {
                 webBrowser1.GoHome();
+                tb_url.Text = webBrowser1.Url.ToString();
+            }
             else
             {
                 webBrowser1.Navigate(home);
+                tb_url.Text = webBrowser1.Url.ToString();
             }
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
+            tb_url.Text = webBrowser1.Url.ToString();
         }
 
         private void Btn_proximo_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
+            tb_url.Text = webBrowser1.Url.ToString();
         }
 
         private void webBrowser1_GoForwardChanged(object sender, EventArgs e)
@@ -82,6 +88,7 @@ namespace PaivaFox
         private void Btn_pesquisar_Click(object sender, EventArgs e)
         {
             webBrowser1.GoSearch();
+            tb_url.Text = "www.bing.com";
         }
 
         private void Btn_definirHome_Click(object sender, EventArgs e)
